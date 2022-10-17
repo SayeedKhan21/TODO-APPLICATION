@@ -1,0 +1,14 @@
+{% extends 'base/global.html' %}
+{% load static %}
+{% block content %}
+<div class="header-bar">
+    <a href="{% url 'tasks' %}" style="text-decoration : bold ;" >&#8592;Go Back</a>
+</div>
+<div class="card-body">
+    <form action="" method ="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input class="button" type="submit" >
+    </form>
+</div>
+{% endblock %}
